@@ -1,0 +1,5 @@
+cmake4epics (1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Konrad Martin <konrad@frib.msu.edu>  Thu, 30 Nov 2017 11:24:36 -0500
