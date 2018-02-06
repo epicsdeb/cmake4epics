@@ -1,0 +1,30 @@
+sudo: required
+dist: trusty
+language: c
+compiler:
+  - gcc
+env:
+  - BASEBRANCH=3.14
+  - BASEBRANCH=3.15
+  - BASEBRANCH=3.16
+  - BASEBRANCH=3.16 TARGET=win32-x86-mingw SHARED=YES
+  - BASEBRANCH=3.16 TARGET=win32-x86-mingw SHARED=NO
+  - BASEBRANCH=3.16 TARGET=windows-x64-mingw SHARED=YES
+  - BASEBRANCH=3.16 TARGET=windows-x64-mingw SHARED=NO
+addons:
+  apt:
+    packages:
+    - libreadline6-dev
+    - libncurses5-dev
+    - perl
+    - clang
+    - mingw-w64
+    - bison
+    - flex
+    - texinfo
+    - install-info
+cache:
+  directories:
+   - $HOME/.cache
+install: ./build-base.sh </dev/null
+script: ./build-travis.sh </dev/null
