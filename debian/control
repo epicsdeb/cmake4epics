@@ -1,9 +1,9 @@
 Source: cmake4epics
 Section: devel
 Priority: optional
-Maintainer: Konrad Martin <konrad@frib.msu.edu>
-Build-Depends: debhelper (>= 9), cmake
-Standards-Version: 3.9.6
+Maintainer: Martin Konrad <konrad@frib.msu.edu>
+Build-Depends: debhelper (>= 10), cmake
+Standards-Version: 4.3.0
 Homepage: https://github.com/mdavidsaver/cmake4epics
 Vcs-Git: https://github.com/mdavidsaver/cmake4epics.git
 Vcs-Browser: https://github.com/mdavidsaver/cmake4epics
