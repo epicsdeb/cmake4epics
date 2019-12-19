@@ -1,0 +1,36 @@
+From: Michael Davidsaver <mdavidsaver@gmail.com>
+Date: Sun, 20 Oct 2019 10:56:52 -0700
+Subject: fixup Platform/ search
+
+---
+ CMakeLists.txt | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 09857e4..f236719 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,6 +11,12 @@
+ # See the License for more information.
+ #=============================================================================
+ 
++cmake_minimum_required(VERSION 2.8)
++
++# recent cmake requires this before project()
++# in order to pick up Platform/
++list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules")
++
+ project(osdetector C CXX)
+ 
+ message(STATUS "All CMake variables")
+@@ -24,10 +30,6 @@ if(NOT CMAKE_BUILD_TYPE)
+   set(CMAKE_BUILD_TYPE "Debug")
+ endif()
+ 
+-cmake_minimum_required(VERSION 2.8)
+-
+-list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/Modules")
+-
+ message(STATUS "System classification provided by CMake")
+ 
+ # Host always available (computed)

@@ -1,3 +1,15 @@
+cmake4epics (1.0-3) unstable; urgency=medium
+
+  * Add patches from upstream
+
+ -- Martin Konrad <konrad@frib.msu.edu>  Thu, 19 Dec 2019 11:34:59 -0500
+
+cmake4epics (1.0-2) unstable; urgency=low
+
+  * Bump up standards version
+
+ -- Martin Konrad <konrad@frib.msu.edu>  Mon, 15 Jul 2019 17:21:59 -0400
+
 cmake4epics (1.0-1) unstable; urgency=low
 
   * Initial Release.

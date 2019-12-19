@@ -1,0 +1,31 @@
+From: Enrique Bernal Ruiz <bernalru@frib.msu.edu>
+Date: Wed, 4 Sep 2019 14:59:08 -0400
+Subject: Add PROTO files to epics_install function
+
+---
+ cmake/Modules/FindEPICSTools.cmake | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/cmake/Modules/FindEPICSTools.cmake b/cmake/Modules/FindEPICSTools.cmake
+index 44f2f09..01b0156 100644
+--- a/cmake/Modules/FindEPICSTools.cmake
++++ b/cmake/Modules/FindEPICSTools.cmake
+@@ -175,7 +175,7 @@ function(epics_add_ioc iocname)
+ endfunction(epics_add_ioc)
+ 
+ function(epics_install)
+-  cmake_parse_arguments("" "" "PREFIX" "PROGS;LIBS;INCS;OSINCS;COMPINCS;DBDS;DBS" "${ARGN}")
++  cmake_parse_arguments("" "" "PREFIX" "PROGS;LIBS;INCS;OSINCS;COMPINCS;DBDS;DBS;PROTOS" "${ARGN}")
+   if(_PROGS OR _LIBS)
+     install(TARGETS ${_PROGS} ${_LIBS}
+       RUNTIME DESTINATION ${_PREFIX}bin/${EPICS_TARGET_ARCH}
+@@ -199,6 +199,9 @@ function(epics_install)
+   if(_DBS)
+     install(FILES ${_DBS} DESTINATION ${_PREFIX}db)
+   endif()
++  if(_PROTOS)
++    install(FILES ${_PROTOS} DESTINATION ${_PREFIX}protocol)
++  endif()
+ endfunction(epics_install)
+ 
+ find_package_handle_standard_args(EPICSTools
