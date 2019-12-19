@@ -1,0 +1,5 @@
+0001-fix-EPICSMake.cpp-path.patch
+0002-epics_expand_dbd-fix-multiple-absolute-paths.patch
+0003-extend-default-module-search-path.patch
+0004-Add-PROTO-files-to-epics_install-function.patch
+0005-fixup-Platform-search.patch
